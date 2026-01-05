@@ -62,6 +62,8 @@ This project documents the journey from basic logic gates to a fully functional 
 - [ ] UART Peripheral Integration
 - [ ] Synthesis on FPGA
 - [ ] Run C Programs via GCC
+
+
 </details>
 
 <br>
@@ -83,3 +85,44 @@ The project follows a standard industrial ASIC/FPGA directory structure:
 │   ├── images/         # Waveforms and Arch diagrams
 │   └── learning_log.md # Weekly technical notes
 └── tools/              # Helper scripts
+```
+
+## ⚡️ Quick Start
+
+### Prerequisites (环境要求)
+*   **Simulator**: Icarus Verilog (`iverilog`)
+*   **Waveform Viewer**: GTKWave or Surfer or VS Code Extension (WaveTrace)
+*   **Compiler**: RISC-V GNU Toolchain (Optional for now)
+
+### Running Simulation (运行仿真)
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/wfchwilliam-arch/my-cpu-learning.git
+cd my-cpu-learning
+```
+
+**2. Run ALU Test**
+**(Compile and run the ALU testbench)**
+
+```bash
+iverilog -g2012 -o wave_alu rtl/core/alu.sv sim/alu/tb_alu.sv
+vvp -n wave_alu
+```
+
+**3. View Waveform**
+**(Open the generated .vcd file)**
+
+```bash
+# MacOS with VS Code installed
+code alu.vcd
+
+# Or using Surfer (if installed)
+# surfer alu.vcd
+```
+
+
+## 📝 Learning Log & Notes
+
+### I maintain a detailed engineering log to track design decisions and debugging processes.
+**👉 Read my Learning Log**
