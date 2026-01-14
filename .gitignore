@@ -1,5 +1,14 @@
+# 忽略系统产生的垃圾
 .DS_Store
-*.vcd
+
 *.vvp
+
 *.out
+
 wave*
+# 忽略 Verilator 的编译产物目录
+obj_dir/
+
+# 忽略波形文件 (这玩意儿会变得巨大)
+*.vcd
+
